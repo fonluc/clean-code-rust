@@ -1,38 +1,35 @@
-# Código Rust Limpo
+# Clean Rust Code  
 
+## Preface: Why Write Clean Code?  
+This document serves as a reference for the Rust community, aiming to help developers write cleaner code. Whether working on a personal project or as part of a larger team, writing clean code is an essential skill. Establishing good paradigms and consistent, accessible standards for writing clean code can help prevent developers from spending hours trying to understand their own work (or that of others).
 
-## Prefácio: Por que Escrever Código Limpo?
+*"We don’t read code, we decode it."* - Peter Seibel
 
-Este documento é uma referência para a comunidade Rust que visa ajudar desenvolvedores a escreverem código mais limpo. Seja trabalhando em um projeto pessoal ou como parte de uma equipe maior, escrever código limpo é uma habilidade importante. Estabelecer bons paradigmas e padrões consistentes e acessíveis para escrever código limpo pode ajudar a prevenir que desenvolvedores percam horas tentando entender seu próprio trabalho (ou o de outros).
+As developers, we are sometimes tempted to write code in a way that is convenient at the moment, without considering best practices; this makes code reviews and testing more difficult. In a way, we are "encoding"—and by doing so, making it harder for others to decode our work. But we want our code to be usable, readable, and maintainable. And that requires coding the right way, not the easy way.
 
-"Nós não lemos código, nós o decodificamos" - Peter Seibel
+This document starts with a simple and brief introduction to the fundamentals of writing clean code. Later, we will discuss concrete examples of refactoring specific to Rust.
 
-Como desenvolvedores, às vezes somos tentados a escrever código de uma maneira conveniente no momento, sem considerar as melhores práticas; isso torna as revisões de código e testes mais difíceis. De certa forma, estamos "codificando" - e, ao fazer isso, tornando mais difícil para outros decodificarem nosso trabalho. Mas queremos que nosso código seja utilizável, legível e manutenível. E isso requer codificar da maneira *correta*, não da maneira fácil.
+### Table of Contents 
+1. Introduction to Clean Code  
+2. Test-Driven Development  
+3. Naming Conventions  
+4. Comments  
+5. Function Naming  
+6. Variable Naming  
+7. Cleaning Functions  
+8. Function Size  
+9. Function Signatures  
+10. Variable Scope  
+11. Variable Declaration  
+12. Clean Rust  
+13. Return Values  
+14. Returning Defined Errors  
+15. Returning Dynamic Errors  
+16. References in Rust  
+17. Closures as Function Pointers  
+18. Traits in Rust  
+19. The `dyn Any`  
+20. Summary
 
-Este documento começa com uma introdução simples e curta aos fundamentos da escrita de código limpo. Mais tarde, discutiremos exemplos concretos de refatoração específicos para Rust.
-
-### Sumário
-* Introdução ao Código Limpo
-   * Desenvolvimento Orientado a Testes
-   * Convenções de Nomenclatura
-   * Comentários
-      * Nomeação de Funções
-      * Nomeação de Variáveis
-   * Limpando Funções
-      * Tamanho de Funções
-      * Assinaturas de Funções
-   * Escopo de Variáveis
-   * Declaração de Variáveis
-* Rust Limpo
-   * Valores de Retorno
-      * Retornando Erros Definidos
-      * Retornando Erros Dinâmicos
-   * Referências em Rust
-   * Closures São Ponteiros de Função
-   * Traits em Rust
-   * O `dyn Any`
-* Resumo
-
-### Introdução ao Código Limpo
-
-Código limpo é o conceito pragmático de promover software legível e manutenível. Código limpo estabelece confiança na base de código e ajuda a minimizar as chances de bugs descuidados serem introduzidos. Também ajuda os desenvolvedores a manter sua agilidade, que normalmente despenca à medida que a base de código se expande devido ao aumento do risco de introduzir bugs.
+### Introduction to Clean Code  
+Clean code is the pragmatic concept of promoting readable and maintainable software. Clean code builds trust in the codebase and helps minimize the chances of careless bugs being introduced. It also helps developers maintain their agility, which typically declines as the codebase expands due to the increased risk of introducing bugs.
