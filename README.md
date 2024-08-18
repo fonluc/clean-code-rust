@@ -1,6 +1,6 @@
 # Clean Rust Code  
 
-(clean-code-rust/assets/good code bad code.jpeg)
+!(clean-code-rust/assets/good code bad code.jpeg)
 
 ## Preface: Why Write Clean Code?  
 This document serves as a reference for the Rust community, aiming to help developers write cleaner code. Whether working on a personal project or as part of a larger team, writing clean code is an essential skill. Establishing good paradigms and consistent, accessible standards for writing clean code can help prevent developers from spending hours trying to understand their own work (or that of others).
